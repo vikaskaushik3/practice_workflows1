@@ -1,0 +1,14 @@
+name: print default env variables
+on:
+  push:
+    branches:
+      - master
+jobs:
+  print_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print default env variables
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Actor: $GITHUB_ACTOR"
+          echo "Branch: $GITHUB_REF_NAME"
